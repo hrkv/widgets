@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Widgets</title>
+</head>
+<body>
+
+  <script async src="https://affiliate.travel.ya.ru/widgets/api.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      (function (w) {
+          function start() {
+              w.removeEventListener('YaTravelAffiliateLoaded', start);
+              w.YaTravelAffiliate.createWidget({
+        "type": "hotelsSearchForm",
+        "containerId": "travelWidget",
+        "widgetParams": {
+                "pointTo": {
+                        "geoId": 213
+                }
+        },
+        "urlParams": {
+                "origin": "https://travel.yandex.ru/",
+                "partner": "admitad",
+                "params": {
+                        "affiliate_clid": "hiddenClid1",
+                        "affiliate_vid": "hiddenVid123",
+                        "utm_source": "admitad",
+                        "utm_media": "cpa",
+                        "utm_campaign": "какой-то_utmCampaign"
+                }
+        }
+});
+          }
+
+          w.YaTravelAffiliate
+              ? start()
+              : w.addEventListener('YaTravelAffiliateLoaded', start);
+      })(window);
+  </script>
+    
+  <div id="travelWidget"></div>
+    
+</body>
+</html>
