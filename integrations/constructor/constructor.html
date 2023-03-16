@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor</title>
+    <style>
+        html, body,
+        .container {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            flex: 0 0 30%;
+            background-color: #ccc;
+        }
+
+        .content {
+            flex: 1 0 70%;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+    </aside>
+      <section class="content">
+          <div id="constructor"></div>
+          <script async src="https://affiliate.travel.ya.ru/widgets/api.js" type="text/javascript"></script>
+          <script type="text/javascript">
+              (function (w) {
+                  function start() {
+                      w.removeEventListener('YaTravelAffiliateLoaded', start);
+                      w.YaTravelAffiliate.createWidget({
+                          type: 'constructor',
+                          containerId: 'constructor',
+                          widgetParams: {
+                              affiliateClid: ['523456789', '123'],
+                              affiliateVid: ['123456789', '12345'],
+                              partner: 'distribution',
+                              domain: 'domain',
+                          },
+                      });
+                  }
+
+                  w.YaTravelAffiliate
+                      ? start()
+                      : w.addEventListener('YaTravelAffiliateLoaded', start);
+              })(window);
+          </script>
+
+      </section>
+  </div>
+</body>
+</html>
