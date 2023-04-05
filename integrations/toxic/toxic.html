@@ -57,6 +57,24 @@
                         }
                     }
                 });
+                
+                w.YaTravelAffiliate.createWidget({
+                    "type": "topHotels",
+                    "containerId": "topHotelsWidget",
+                    "widgetParams": {
+                        "geoId": 43,
+                        "sorting": "popular"
+                    },
+                    "urlParams": {
+                        "origin": "https://s7.travel.yandex.ru",
+                        "partner": "distribution",
+                        "params": {
+                            "affiliate_clid": "523456789",
+                            "utm_source": "distribution",
+                            "utm_medium": "cpa"
+                        }
+                    }
+                });
             }
 
             w.YaTravelAffiliate
@@ -69,6 +87,8 @@
 
     <p class="paragraph"><strong class="bold">Общий доход семьи: </strong>10&nbsp;900⁠—⁠12&nbsp;900&nbsp;ILS⁣ (<span class="featureContainer js-featureContainer featureContainer--inline" data-name="exchange-rate" data-conf="{&quot;_attrs&quot;: {&quot;fromCurrency&quot;: &quot;ILS&quot;, &quot;fromValue&quot;: &quot;10900&quot;, &quot;toCurrency&quot;: &quot;RUB&quot;, &quot;placeholder&quot;: &quot;225 630&quot;, &quot;inline&quot;: true}, &quot;_extra&quot;: {}, &quot;_metadata&quot;: {&quot;statsApiUrl&quot;: &quot;https://scribe.journal.tinkoff.ru/api/configdata/None/stats/&quot;, &quot;configId&quot;: null, &quot;configName&quot;: &quot;&quot;, &quot;featureId&quot;: &quot;exchange-rate&quot;}}" style="min-height: 0" data-sc=""><span data-tj-feature="exchange-rate-ILS">231&nbsp;634</span></span><link rel="stylesheet" href="./t-j_files/exchange-rate.css"><script src="./t-j_files/exchange-rate.js" defer=""></script>⁠—⁠<span class="featureContainer js-featureContainer featureContainer--inline" data-name="exchange-rate" data-conf="{&quot;_attrs&quot;: {&quot;fromCurrency&quot;: &quot;ILS&quot;, &quot;fromValue&quot;: &quot;12900&quot;, &quot;toCurrency&quot;: &quot;RUB&quot;, &quot;placeholder&quot;: &quot;267 030&quot;, &quot;inline&quot;: true}, &quot;_extra&quot;: {}, &quot;_metadata&quot;: {&quot;statsApiUrl&quot;: &quot;https://scribe.journal.tinkoff.ru/api/configdata/None/stats/&quot;, &quot;configId&quot;: null, &quot;configName&quot;: &quot;&quot;, &quot;featureId&quot;: &quot;exchange-rate&quot;}}" style="min-height: 0" data-sc=""><span data-tj-feature="exchange-rate-ILS">274&nbsp;136</span></span><link rel="stylesheet" href="./t-j_files/exchange-rate.css"><script src="./t-j_files/exchange-rate.js" defer=""></script>&nbsp;<span class="ruble">Р</span>) в&nbsp;месяц.</p>
 
+    <div id="topHotelsWidget" style="width: 100%;"></div>
+    
     <p class="paragraph"><strong class="bold">Сколько откладываем: </strong>сейчас ничего не&nbsp;откладываем, только тратим. </p>
 
     <p class="paragraph"><strong class="bold">Сколько накопили. </strong>За&nbsp;последние три года у&nbsp;нас было много событий, на&nbsp;которые пришлось потратиться: </p>
