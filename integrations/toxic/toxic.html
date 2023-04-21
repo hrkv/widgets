@@ -88,6 +88,39 @@
     <p class="paragraph"><strong class="bold">Общий доход семьи: </strong>10&nbsp;900⁠—⁠12&nbsp;900&nbsp;ILS⁣ (<span class="featureContainer js-featureContainer featureContainer--inline" data-name="exchange-rate" data-conf="{&quot;_attrs&quot;: {&quot;fromCurrency&quot;: &quot;ILS&quot;, &quot;fromValue&quot;: &quot;10900&quot;, &quot;toCurrency&quot;: &quot;RUB&quot;, &quot;placeholder&quot;: &quot;225 630&quot;, &quot;inline&quot;: true}, &quot;_extra&quot;: {}, &quot;_metadata&quot;: {&quot;statsApiUrl&quot;: &quot;https://scribe.journal.tinkoff.ru/api/configdata/None/stats/&quot;, &quot;configId&quot;: null, &quot;configName&quot;: &quot;&quot;, &quot;featureId&quot;: &quot;exchange-rate&quot;}}" style="min-height: 0" data-sc=""><span data-tj-feature="exchange-rate-ILS">231&nbsp;634</span></span><link rel="stylesheet" href="./t-j_files/exchange-rate.css"><script src="./t-j_files/exchange-rate.js" defer=""></script>⁠—⁠<span class="featureContainer js-featureContainer featureContainer--inline" data-name="exchange-rate" data-conf="{&quot;_attrs&quot;: {&quot;fromCurrency&quot;: &quot;ILS&quot;, &quot;fromValue&quot;: &quot;12900&quot;, &quot;toCurrency&quot;: &quot;RUB&quot;, &quot;placeholder&quot;: &quot;267 030&quot;, &quot;inline&quot;: true}, &quot;_extra&quot;: {}, &quot;_metadata&quot;: {&quot;statsApiUrl&quot;: &quot;https://scribe.journal.tinkoff.ru/api/configdata/None/stats/&quot;, &quot;configId&quot;: null, &quot;configName&quot;: &quot;&quot;, &quot;featureId&quot;: &quot;exchange-rate&quot;}}" style="min-height: 0" data-sc=""><span data-tj-feature="exchange-rate-ILS">274&nbsp;136</span></span><link rel="stylesheet" href="./t-j_files/exchange-rate.css"><script src="./t-j_files/exchange-rate.js" defer=""></script>&nbsp;<span class="ruble">Р</span>) в&nbsp;месяц.</p>
 
     <div id="topHotelsWidget" style="width: 100%;"></div>
+
+    <script async src="https://aflt.travel.ya.ru/widgets/api.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function (w) {
+            function start() {
+                w.removeEventListener('YaTravelAffiliateLoaded', start);
+                w.YaTravelAffiliate.createWidget({
+                    "type": "topHotels",
+                    "containerId": "travelWidgetTopHotels",
+                    "widgetParams": {
+                            "geoId": 213,
+                            "sorting": "popular",
+                            "affiliateClid": "12345"
+                    },
+                    "urlParams": {
+                            "origin": "https://travel.yandex.ru/",
+                            "partner": "distribution",
+                            "params": {
+                                    "affiliate_clid": "12345",
+                                    "utm_source": "distribution",
+                                    "utm_medium": "cpa"
+                            }
+                    }
+                });
+            }
+
+            w.YaTravelAffiliate
+                ? start()
+                : w.addEventListener('YaTravelAffiliateLoaded', start);
+        })(window);
+    </script>
+    <div id="travelWidgetTopHotels"></div>
+
     
     <p class="paragraph"><strong class="bold">Сколько откладываем: </strong>сейчас ничего не&nbsp;откладываем, только тратим. </p>
 

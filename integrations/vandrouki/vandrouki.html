@@ -311,6 +311,39 @@ oneSignal_options['promptOptions'] = { };
 
     <div id="travelWidget" style="width: 100%;"></div>
 
+    <script async src="https://aflt.travel.ya.ru/widgets/api.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function (w) {
+            function start() {
+                w.removeEventListener('YaTravelAffiliateLoaded', start);
+                w.YaTravelAffiliate.createWidget({
+                    "type": "topHotels",
+                    "containerId": "travelWidgetTopHotels",
+                    "widgetParams": {
+                            "geoId": 213,
+                            "sorting": "popular",
+                            "affiliateClid": "12345"
+                    },
+                    "urlParams": {
+                            "origin": "https://travel.yandex.ru/",
+                            "partner": "distribution",
+                            "params": {
+                                    "affiliate_clid": "12345",
+                                    "utm_source": "distribution",
+                                    "utm_medium": "cpa"
+                            }
+                    }
+                });
+            }
+
+            w.YaTravelAffiliate
+                ? start()
+                : w.addEventListener('YaTravelAffiliateLoaded', start);
+        })(window);
+    </script>
+    <div id="travelWidgetTopHotels"></div>
+
+
 <p>Кроме <strong>практически всех внутренних направлений</strong>, в акции участвуют <strong>полёты по всем зарубежным направлениям</strong>.</p>
 <p><a href="https://vandrouki.ru/wp-content/uploads/2023/03/snimok-ekrana-2023-03-06-v-22.06.03.png"><img decoding="async" loading="lazy" class="size-large wp-image-207587 aligncenter" src="./vandrouki_files/snimok-ekrana-2023-03-06-v-22.06.03-1024x778.png" alt="" width="580" height="441" srcset="https://vandrouki.ru/wp-content/uploads/2023/03/snimok-ekrana-2023-03-06-v-22.06.03-1024x778.png 1024w, https://vandrouki.ru/wp-content/uploads/2023/03/snimok-ekrana-2023-03-06-v-22.06.03-300x228.png 300w, https://vandrouki.ru/wp-content/uploads/2023/03/snimok-ekrana-2023-03-06-v-22.06.03-768x584.png 768w, https://vandrouki.ru/wp-content/uploads/2023/03/snimok-ekrana-2023-03-06-v-22.06.03-580x441.png 580w, https://vandrouki.ru/wp-content/uploads/2023/03/snimok-ekrana-2023-03-06-v-22.06.03.png 1458w" sizes="(max-width: 580px) 100vw, 580px"></a></p>
 <p>Промо-тарифы увидеть элементарно. <a href="https://www.cebupacificair.com/booking/select-flight" target="_blank" rel="noopener"><strong>Сайт лоукостера</strong></a> их сам подсвечивает при выборе маршрута:</p>

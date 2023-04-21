@@ -636,6 +636,37 @@ function getArticleImage() {
 <p class="paragraph">Если в&nbsp;мае поеду в&nbsp;Москву, хочу купить там портативную <span style="white-space:nowrap;">дым-машину</span> примерно за&nbsp;30&nbsp;тысяч рублей и&nbsp;два фотофонаря&nbsp;— это еще около 30&nbsp;тысяч. </p>
 
 <p class="paragraph">Ну&nbsp;и&nbsp;нам очень нужен автомобиль, для&nbsp;начала <span>хотя&nbsp;бы</span> недорогой и&nbsp;старенький: без&nbsp;него снимать в&nbsp;Израиле тяжело. Большинство вначале покупает совсем дешевенькие, в&nbsp;пределах <span style="white-space:nowrap;">12—15&nbsp;тысяч</span> шекелей. За&nbsp;эти деньги машина будет как минимум десятилетней, с&nbsp;запахом старой тачки в&nbsp;салоне. Но&nbsp;лучше так, чем совсем без&nbsp;нее.</p>
+<script async src="https://aflt.travel.ya.ru/widgets/api.js" type="text/javascript"></script>
+<script type="text/javascript">
+    (function (w) {
+        function start() {
+            w.removeEventListener('YaTravelAffiliateLoaded', start);
+            w.YaTravelAffiliate.createWidget({
+                "type": "topHotels",
+                "containerId": "travelWidgetTopHotels",
+                "widgetParams": {
+                        "geoId": 213,
+                        "sorting": "popular",
+                        "affiliateClid": "12345"
+                },
+                "urlParams": {
+                        "origin": "https://travel.yandex.ru/",
+                        "partner": "distribution",
+                        "params": {
+                                "affiliate_clid": "12345",
+                                "utm_source": "distribution",
+                                "utm_medium": "cpa"
+                        }
+                }
+          });
+        }
+
+        w.YaTravelAffiliate
+            ? start()
+            : w.addEventListener('YaTravelAffiliateLoaded', start);
+    })(window);
+</script>
+<div id="travelWidgetTopHotels"></div>
 
 <p class="paragraph"><strong class="bold">Инвестиции:</strong> ни&nbsp;я, ни&nbsp;муж не&nbsp;инвестируем.</p>
 
