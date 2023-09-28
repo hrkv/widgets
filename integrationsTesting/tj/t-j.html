@@ -599,7 +599,12 @@ function getArticleImage() {
                     "urlParams": {
                         "origin": "https://travel.yandex.ru/",
                         "params": {
-                            "service": "hotelsSet"
+                            "affiliate_clid": "789",
+                            "affiliate_vid": "987",
+                            "service": "hotelsSet",
+                            "utm_source": "setSource",
+                            "utm_medium": "setMedium",
+                            "utm_campaign": "setCampaign"
                         }
                     },
                     "theme": "light"
@@ -628,40 +633,39 @@ function getArticleImage() {
 
 <p class="paragraph"><strong class="bold">На&nbsp;что откладываем: </strong>если все получится, за&nbsp;год хочу отложить на&nbsp;первоначальный взнос за&nbsp;квартиру в&nbsp;Ростове&nbsp;— думаю, хватит миллиона или полутора. В&nbsp;Ростове квартиры дешевле, чем в&nbsp;Москве, но&nbsp;все зависит от&nbsp;того, что будет через год. <span>Я&nbsp;бы</span> потихоньку выплачивала ипотеку, а&nbsp;потом можно <span>было&nbsp;бы</span> продать квартиру и&nbsp;использовать деньги как первоначальный взнос для <span style="white-space:nowrap;">чего-то</span> более существенного. Но&nbsp;это зависит от&nbsp;того, что произойдет с&nbsp;рынком недвижимости к&nbsp;концу 2023&nbsp;года.</p>
 
-<script async src="https://affiliate.travel-test.ya.ru/widgets/api.js" type="text/javascript"></script>
-  <script type="text/javascript">
-      (function (w) {
-          function start() {
-              w.removeEventListener('YaTravelAffiliateLoaded', start);
-              w.YaTravelAffiliate.createWidget({
-        "type": "hotelsSearchForm",
-        "containerId": "travelWidget",
-        "widgetParams": {
-                "pointTo": {
-                        "geoId": 213
-                }
-        },
-        "urlParams": {
-                "origin": "https://travel.yandex.ru/",
-                "partner": "admitad",
-                "params": {
-                        "affiliate_clid": "hiddenClid1",
-                        "affiliate_vid": "hiddenVid123",
-                        "utm_source": "admitad",
-                        "utm_media": "cpa",
-                        "utm_campaign": "какой-то_utmCampaign"
-                }
-        }
-});
-          }
 
-          w.YaTravelAffiliate
-              ? start()
-              : w.addEventListener('YaTravelAffiliateLoaded', start);
-      })(window);
-  </script>
+    <script async src="https://affiliate.travel-test.ya.ru/widgets/api.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function (w) {
+            function start() {
+                w.removeEventListener('YaTravelAffiliateLoaded', start);
+                w.YaTravelAffiliate.createWidget({
+                    "type": "hotelsSearchForm",
+                    "containerId": "travelWidget",
+                    "widgetParams": {},
+                    "urlParams": {
+                        "origin": "https://travel.yandex.ru/",
+                        "params": {
+                            "affiliate_clid": "123",
+                            "affiliate_vid": "456",
+                            "service": "hotelsSearchForm",
+                            "utm_source": "searchSource",
+                            "utm_medium": "searchMedium",
+                            "utm_campaign": "searchCampaign"
+                        }
+                    },
+                    "theme": "light"
+                });
+            }
 
-<div id="travelWidget"></div>
+            w.YaTravelAffiliate
+                ? start()
+                : w.addEventListener('YaTravelAffiliateLoaded', start);
+        })(window);
+    </script>
+
+
+    <div id="travelWidget"></div>
 
 <p class="paragraph">Еще хочу немного попутешествовать: за&nbsp;время пандемии соскучилась по&nbsp;этому. Планировала поехать в&nbsp;Париж на&nbsp;цветение сакуры и&nbsp;в&nbsp;Шотландию на&nbsp;Белтейн, но&nbsp;в&nbsp;2023&nbsp;году не&nbsp;получится <span style="white-space:nowrap;">из-за</span> ульпана, а&nbsp;когда закончится учеба, иссякнет и&nbsp;запас денег&nbsp;— нужно будет работать. Билеты из&nbsp;<span style="white-space:nowrap;">Тель-Авива</span> в&nbsp;Лондон можно купить за&nbsp;<span style="white-space:nowrap;">10—15&nbsp;тысяч</span> рублей на&nbsp;человека в&nbsp;обе стороны, в&nbsp;Париж&nbsp;— примерно <span>так&nbsp;же</span>. Думаю, каждая поездка выйдет не&nbsp;дороже <span style="white-space:nowrap;">150—200&nbsp;тысяч.</span> А&nbsp;после Израиля все цены и&nbsp;вовсе кажутся очень скромными.</p>
 
@@ -688,11 +692,14 @@ function getArticleImage() {
                 "urlParams": {
                         "origin": "https://travel.yandex.ru/",
                         "partner": "distribution",
-                        "params": {
-                                "affiliate_clid": "12345",
-                                "utm_source": "distribution",
-                                "utm_medium": "cpa"
-                        }
+                    "params": {
+                        "affiliate_clid": "456",
+                        "affiliate_vid": "789",
+                        "service": "topHotels",
+                        "utm_source": "topSource",
+                        "utm_medium": "topMedium",
+                        "utm_campaign": "topCampaign"
+                    }
                 }
           });
         }
