@@ -63,7 +63,38 @@
     </script>
     <div id="hotelsSetWidget"></div>
     <p class="paragraph"><strong class="bold">Сколько откладываем: </strong>сейчас ничего не&nbsp;откладываем, только тратим. </p>
+    <script async src="https://affiliate.travel-test.ya.ru/widgets/api.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function (w) {
+            function start() {
+                w.removeEventListener('YaTravelAffiliateLoaded', start);
+                w.YaTravelAffiliate.createWidget({
+                    "type": "hotelsOnMap",
+                    "containerId": "hotelsOnMapWidget",
+                    "widgetParams": {
+                        "geoId": 2,
+                        "affiliateClid": "12345"
+                    },
+                    "urlParams": {
+                        "origin": "https://travel.yandex.ru/",
+                        "partner": "distribution",
+                        "params": {
+                            "affiliate_clid": "12345",
+                            "service": "hotelsOnMap",
+                            "utm_source": "distribution",
+                            "utm_medium": "cpa"
+                        }
+                    },
+                    "theme": "light"
+                });
+            }
 
+            w.YaTravelAffiliate
+                ? start()
+                : w.addEventListener('YaTravelAffiliateLoaded', start);
+        })(window);
+    </script>
+    <div id="hotelsOnMapWidget" style="width: 100%;"></div>
     <p class="paragraph"><strong class="bold">Сколько накопили. </strong>За&nbsp;последние три года у&nbsp;нас было много событий, на&nbsp;которые пришлось потратиться: </p>
 
     <script async src="https://affiliate.travel-test.ya.ru/widgets/api.js" type="text/javascript"></script>
